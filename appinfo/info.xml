@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!--
+  - SPDX-FileCopyrightText: 2025 Nextcloud GmbH and Nextcloud contributors
+  - SPDX-License-Identifier: AGPL-3.0-or-later
+-->
+<info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
+	  xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+	<id>roll_dice_bot</id>
+	<name>Roll a dice</name>
+	<summary><![CDATA[A simple `/roll` command for talk to roll dices]]></summary>
+	<description><![CDATA[Supports multiple dice rolls as well as dice with other side count]]></description>
+
+	<version>1.0.0</version>
+	<licence>agpl</licence>
+
+	<author>Joas Schilling</author>
+
+	<namespace>RollDiceBot</namespace>
+
+	<types>
+		<prevent_group_restriction />
+	</types>
+
+	<category>multimedia</category>
+	<category>social</category>
+
+	<website>https://github.com/nextcloud/roll_dice_bot</website>
+	<bugs>https://github.com/nextcloud/roll_dice_bot/issues</bugs>
+	<repository>https://github.com/nextcloud/roll_dice_bot.git</repository>
+
+	<screenshot>https://raw.githubusercontent.com/nextcloud/roll_dice_bot/main/docs/screenshot.png</screenshot>
+
+	<dependencies>
+		<nextcloud min-version="31" max-version="33" />
+	</dependencies>
+
+	<repair-steps>
+		<install>
+			<step>OCA\RollDiceBot\Migration\InstallBot</step>
+		</install>
+	</repair-steps>
+</info>
